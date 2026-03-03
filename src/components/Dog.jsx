@@ -1,18 +1,31 @@
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useThree } from '@react-three/fiber'
+import * as THREE from 'three'
 import { OrbitControls, useGLTF, useTexture } from '@react-three/drei'
 import { Suspense } from 'react'
-import { normalMap } from 'three/src/nodes/display/NormalMapNode.js'
 
 const DogModel = () => {
   const model = useGLTF("/models/dog.drc.glb")
+
+  useThree(({camera, scene, gl}) => {
+    gl.toneMapping = THREE.ReinhardToneMapping,
+    gl.outputColorSpace = THREE.SRGBColorSpace
+  })
  
-  const textures =  useTexture({
-    normalMap: "/dog_normals.jpg"
-  }) 
+
+  const [ normalMap, sampleMatCap] = (useTexture(["/dog_normals.jpg","/matcap/mat-2.png"])).map(texture => {
+    texture.flipY = false
+    texture.outputColorSpace = THREE.SRGBColorSpace
+    return texture;
+  })
+
+  
 
   model.scene.traverse((child) => {
        if(child.name.includes("DOG")){
-            //do this
+            child.material = new THREE.MeshMatcapMaterial({
+              normalMap:normalMap,
+              matcap:sampleMatCap
+            })
        }
   })
 
@@ -24,8 +37,8 @@ const DogModel = () => {
 const Dog = () => {
   return (
     <Canvas camera={{ position: [0, 2, 6], fov: 50 }}>
-      <ambientLight intensity={2} />
-      <directionalLight position={[5, 5, 5]} intensity={3} />
+      <ambientLight intensity={1} />
+      <directionalLight position={[5, 5, 5]} intensity={1} />
 
       <Suspense fallback={null}>
         <DogModel />
