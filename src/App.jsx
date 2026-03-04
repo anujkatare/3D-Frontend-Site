@@ -82,31 +82,31 @@ function App() {
           <div className="titles">
             <div img-title="tomorrowland" className="title">
               <small>2020 - ONGOING</small>
-              <h1>Tomorrowland</h1>
+              <h1>Indore - Street food capital</h1>
             </div>
             <div img-title="navy-pier" className="title">
               <small>2020 - ONGOING</small>
-              <h1> Navy Pier</h1>
+              <h1> Jabalpur - The Sanskardhani</h1>
             </div>
             <div img-title="msi-chicago" className="title">
               <small>2020 - ONGOING</small>
-              <h1>  MSI Chicago</h1>
+              <h1>  Bhopal - City of Lakes</h1>
             </div>
             <div img-title="phone" className="title">
               <small>2020 - ONGOING</small>
-              <h1>This Was Louise’s Phone</h1>
+              <h1>Gwalior - Cheer's for Music</h1>
             </div>
             <div img-title="kikk" className="title">
               <small>2020 - ONGOING</small>
-              <h1>KIKK Festival 2018</h1>
+              <h1>Delhi - Heart of India</h1>
             </div>
             <div img-title="kennedy" className="title">
               <small>2020 - ONGOING</small>
-              <h1>The Kennedy Center</h1>
+              <h1>Bombay - Dream City</h1>
             </div>
             <div img-title="opera" className="title">
               <small>2020 - ONGOING</small>
-              <h1>Royal Opera Of Wallonia</h1>
+              <h1>Itarsi - City of Junctions</h1>
             </div>
           </div>
 
