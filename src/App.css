@@ -1,5 +1,19 @@
-html,body,#root{
-  height: 100%;
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  background-color: #111; /* Dark grey so we can see the black dog */
+}
+
+section {
+  min-height: 100vh;
   width: 100%;
-  background-color: black;
+  position: relative;
+  z-index: 2; 
+  background: transparent ;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  border: 1px solid rgba(255,255,255,0.1);
 }
