@@ -81,32 +81,32 @@ function App() {
         <section id='section-2' >
           <div className="titles">
             <div img-title="tomorrowland" className="title">
-              <small>2020 - ONGOING</small>
-              <h1>Indore - Street food capital</h1>
+              <small>2024 - ONGOING</small>
+              <h1>UI/UX Design</h1>
             </div>
             <div img-title="navy-pier" className="title">
-              <small>2020 - ONGOING</small>
-              <h1> Jabalpur - The Sanskardhani</h1>
+              <small>2024 - ONGOING</small>
+              <h1> Frontend development</h1>
             </div>
             <div img-title="msi-chicago" className="title">
-              <small>2020 - ONGOING</small>
-              <h1>  Bhopal - City of Lakes</h1>
+              <small>2024 - ONGOING</small>
+              <h1>Backend development</h1>
             </div>
             <div img-title="phone" className="title">
-              <small>2020 - ONGOING</small>
-              <h1>Gwalior - Cheer's for Music</h1>
+              <small>2024 - ONGOING</small>
+              <h1>WebSockets</h1>
             </div>
             <div img-title="kikk" className="title">
-              <small>2020 - ONGOING</small>
-              <h1>Delhi - Heart of India</h1>
+              <small>2024 - ONGOING</small>
+              <h1>Data Structures & Algorithm</h1>
             </div>
             <div img-title="kennedy" className="title">
-              <small>2020 - ONGOING</small>
-              <h1>Bombay - Dream City</h1>
+              <small>2024 - ONGOING</small>
+              <h1>Database</h1>
             </div>
             <div img-title="opera" className="title">
-              <small>2020 - ONGOING</small>
-              <h1>Itarsi - City of Junctions</h1>
+              <small>2024 - ONGOING</small>
+              <h1>Git, Gitbash and GitHub</h1>
             </div>
           </div>
 
