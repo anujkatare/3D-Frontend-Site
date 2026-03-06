@@ -2,6 +2,10 @@
 
 A React-based 3D website featuring an animated dog model using Three.js and React Three Fiber.
 
+## Live Demo
+
+Check out the deployed version: [https://threed-dog-model.onrender.com/](https://threed-dog-model.onrender.com/)
+
 ## Features
 
 - Interactive 3D dog model with animations
@@ -86,3 +90,4 @@ The dog model includes animations that are controlled via GSAP and ScrollTrigger
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
