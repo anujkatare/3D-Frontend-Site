@@ -3,8 +3,6 @@ import Dog from './components/Dog'
 import { Canvas } from '@react-three/fiber'
 
 function App() {
-
-
   return (
     <>
       <main>
@@ -25,7 +23,7 @@ function App() {
             position: "fixed",
             top: 0,
             left: 0,
-            zIndex: 1,
+            zIndex: 5,
           }} >
           <Dog />
         </Canvas>
@@ -73,10 +71,8 @@ function App() {
               </p>
             </div>
           </div>
-
           <div className="first-line"></div>
           <div className="second-line"></div>
-
         </section>
         <section id='section-2' >
           <div className="titles">
@@ -86,15 +82,15 @@ function App() {
             </div>
             <div img-title="navy-pier" className="title">
               <small>2024 - ONGOING</small>
-              <h1> Frontend development</h1>
+              <h1>Frontend Development</h1>
             </div>
             <div img-title="msi-chicago" className="title">
               <small>2024 - ONGOING</small>
-              <h1>Backend development</h1>
+              <h1>Web Sockets</h1>
             </div>
             <div img-title="phone" className="title">
               <small>2024 - ONGOING</small>
-              <h1>WebSockets</h1>
+              <h1>Backend Development</h1>
             </div>
             <div img-title="kikk" className="title">
               <small>2024 - ONGOING</small>
@@ -102,17 +98,90 @@ function App() {
             </div>
             <div img-title="kennedy" className="title">
               <small>2024 - ONGOING</small>
-              <h1>Database</h1>
+              <h1>Databases</h1>
             </div>
             <div img-title="opera" className="title">
               <small>2024 - ONGOING</small>
-              <h1>Git, Gitbash and GitHub</h1>
+              <h1>Git, GitBash & GitHub</h1>
             </div>
           </div>
-
-
         </section>
-        <section id='section-3' ></section>
+        <section id='section-3'>
+          <div className="section-3-content">
+            <div className="top-row">
+              <div className="left">
+                <small className="eyebrow">THIS IS HOW WE DO IT</small>
+                <h1>
+                  We’re crafting <br /> 
+                  emotional <br /> 
+                  experiences aimed <br /> 
+                  at improving <br /> 
+                  results
+                </h1>
+              </div>
+              <div className="right"></div>
+            </div>
+            <div className="bottom-row">
+              <div className="left"></div>
+              <div className="right">
+                <div className="description-grid">
+                  <p>
+                    Dogstudio is a design & technology firm working globally from our
+                    offices based in Belgium and Chicago. Our strong focus on producing
+                    high quality & emotional brandings, digital products and experiences
+                    became a signature.
+                  </p>
+                  <p>
+                    We're passionate about moving people and solving problems for the
+                    likes of Microsoft, The Museum of Science And Industry Of Chicago,
+                    The Kennedy Center of Washington, Dragone, Quanta Magazine, and many
+                    more.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer className="footer">
+          <div className="footer-container">
+            <div className="footer-cta">
+              <small className="eyebrow">GET IN TOUCH</small>
+              <h2 className="big-talk">
+                Let's <br /> Talk
+              </h2>
+            </div>
+            <div className="footer-bottom">
+              <div className="footer-col">
+                <h4>OFFICES</h4>
+                <p>Jabalpur, India</p>
+                <p>Bhopal, India</p>
+                <p>Indore, India</p>
+              </div>
+              <div className="footer-col">
+                <h4>SAY HI</h4>
+                <a href="mailto:anujkatare.jobs@gmail.com">anujkatare.jobs@gmail.com</a>
+                <p>+91 7804018XXX</p>
+              </div>
+              <div className="footer-col">
+                <h4>FOLLOW</h4>
+                <div className="social-links">
+                  <a href="https://www.instagram.com/theyhates.anuj/">Instagram</a>
+                  <a href="https://x.com/AnujKatare">Twitter</a>
+                  <a href="www.linkedin.com/in/anuj-katare">LinkedIn</a>
+                </div>
+                <div className="social-links">
+                  <a href="https://github.com/anujkatare">Github</a>
+                  <a href="https://discordapp.com/users/1311591672227823687">Discord</a>
+                  <a href="https://in.pinterest.com/theyhatesanuj28/">Pinterest</a>
+                </div>
+              </div>
+              <div className="footer-col copyright">
+                <p>© 2026 DOGSTUDIO</p>
+                <p>PART OF DEPT®</p>
+              </div>
+            </div>
+          </div>
+        </footer>
       </main>
     </>
   )

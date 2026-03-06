@@ -20,7 +20,13 @@ main {
 section {
   min-height: 100vh;
   position: relative;
-  z-index: 2;
+  z-index: 10;
+  background: transparent;
+}
+
+#canvas-elem {
+  z-index: 5 !important; 
+  pointer-events: none;
 }
 
 #canvas-elem::after {
@@ -30,17 +36,24 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -1; 
   background-image: url(/background-l.png);
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 0.3s linear;
 }
 
+.titles, 
+.title, 
+.nav-elem, 
+.values-link {
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
+}
+
 #section-1 {
-
   --gap: 5rem;
-
   position: relative;
 
   nav {
@@ -84,11 +97,9 @@ section {
       line-height: 0.8;
       text-align: right;
     }
-
   }
 
   .bottom {
-
     display: flex;
     gap: var(--gap);
 
@@ -103,7 +114,6 @@ section {
         line-height: 1.5;
       }
     }
-
   }
 
   .first-line {
@@ -123,16 +133,13 @@ section {
     top: 28%;
     right: 12%;
   }
-
-
 }
 
 #section-2 {
   .titles {
-    display: flex;
-    flex-direction: column;
-    padding-left: 17rem;
-    margin-block: 10rem;
+    pointer-events: auto;
+    position: relative;
+    z-index: 20;
 
     .title {
       display: flex;
@@ -141,26 +148,24 @@ section {
       padding-block: 2rem;
       transition: all 0.3s linear;
       cursor: pointer;
+      margin-left: 12rem;
 
       h1 {
         font-size: 4.5rem;
         font-weight: 100;
         line-height: 1;
+        margin-left: 1rem;
       }
 
       small {
         margin-top: 0.6rem;
         font-size: 0.5rem;
       }
-
     }
 
     .title:hover {
       opacity: 1;
     }
-
-
-
   }
 }
 
@@ -185,7 +190,6 @@ main:has(#section-2 .title:hover) #canvas-elem::after {
     opacity: 0;
     transition: all 0.3s linear;
   }
-
 }
 
 main:has(#section-2 .title[img-title="tomorrowland"]:hover) .images #tomorrowland {
@@ -212,11 +216,175 @@ main:has(#section-2 .title[img-title="kikk"]:hover) .images #kikk {
   opacity: 1;
   background-color: rgba(1, 15, 92, 0.679);
 }
+
 main:has(#section-2 .title[img-title="kennedy"]:hover) .images #kennedy {
   opacity: 1;
   background-color: rgb(4, 7, 24);
 }
+
 main:has(#section-2 .title[img-title="opera"]:hover) .images #opera {
   opacity: 1;
   background-color: rgb(176, 4, 4);
+}
+
+#section-3 {
+  padding: 5rem 2.5rem;
+  display: flex;
+  align-items: center;
+  margin-top: 15rem;
+  z-index: 1; 
+}
+
+.section-3-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#section-3 .top-row, 
+#section-3 .bottom-row {
+  display: flex;
+  width: 100%;
+}
+
+#section-3 .left, 
+#section-3 .right {
+  width: 50%;
+}
+
+#section-3 h1 {
+  position: relative;
+  z-index: -1; 
+  font-size: 3rem;
+  line-height: 0.9;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  margin-left: 15rem;
+  letter-spacing: -2px;
+}
+
+#section-3 .eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  opacity: 0.5;
+  margin-left: 15rem;
+  font-weight: 700;
+}
+
+#section-3 .description-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+#section-3 .description-grid p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+#section-3 .values-link {
+  pointer-events: auto;
+  position: relative;
+  z-index: 20;
+}
+
+#section-3 .values-link:hover {
+  border-color: white;
+}
+
+@media (max-width: 1024px) {
+  #section-3 h1 { font-size: 3.5rem; }
+  #section-3 .description-grid { grid-template-columns: 1fr; }
+}
+
+.footer {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 5rem 2.5rem;
+  isolation: isolate; 
+  z-index: 10;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-cta {
+  position: relative;
+  z-index: -1; 
+  margin-bottom: 10rem;
+}
+
+.footer-cta .eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  opacity: 0.5;
+  font-weight: 700;
+}
+
+.footer-cta .big-talk {
+  font-size: 5vw;
+  line-height: 0.8;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -5px;
+  margin-top: 2rem;
+}
+
+.footer-bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+.footer-col h4 {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  opacity: 0.4;
+  margin-bottom: 1.5rem;
+}
+
+.footer-col p, 
+.footer-col a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: whitesmoke;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+.copyright {
+  text-align: right;
+  opacity: 0.3;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .big-talk { font-size: 20vw; }
 }

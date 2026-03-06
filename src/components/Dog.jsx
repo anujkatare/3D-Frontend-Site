@@ -6,13 +6,10 @@ import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-
 const Dog = () => {
-
 
     gsap.registerPlugin(useGSAP())
     gsap.registerPlugin(ScrollTrigger)
-
 
     const model = useGLTF("/models/dog.drc.glb")
 
@@ -27,8 +24,6 @@ const Dog = () => {
     useEffect(() => {
         actions[ "Take 001" ].play()
     }, [ actions ])
-
-
 
     const [ normalMap ] = (useTexture([ "/dog_normals.jpg", ]))
         .map(texture => {
@@ -111,8 +106,6 @@ const Dog = () => {
         shader.uniforms.uMatcapTexture2 = material.current.uMatcap2
         shader.uniforms.uProgress = material.current.uProgress
 
-        // Store reference to shader uniforms for GSAP animation
-
         shader.fragmentShader = shader.fragmentShader.replace(
             "void main() {",
             `
@@ -149,7 +142,6 @@ const Dog = () => {
     })
 
     const dogModel = useRef(model)
-
 
     useGSAP(() => {
 
@@ -290,7 +282,6 @@ const Dog = () => {
         })
 
     }, [])
-
 
     return (
         <>
